@@ -1,7 +1,8 @@
 # jacoco2cobertura
 用于将 jacoco xml 转化为 cobertura的python脚本
 
-首先感谢: https://github.com/rix0rrr/cover2cover该项目,
+首先感谢: https://github.com/rix0rrr/cover2cover
+该项目,
 没有他就没有本项目
 其次在该项目中做了如下优化:
 1. 语法全面支持Python3
