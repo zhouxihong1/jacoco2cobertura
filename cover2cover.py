@@ -235,16 +235,18 @@ def jacoco2cobertura(file_name, _source_roots, _output_path=None, _xml_pretty=Fa
 
     into = Et.Element('coverage')
     convert_root(root, into, _source_roots)
-    xml_head = '<?xml version="1.0" ?>'
+    # xml_head = '<?xml version="1.0" ?>'
     # xml_body = Et.tostring(into).decode()
     xml_body = Et.tostring(into, encoding='utf-8', xml_declaration=True).decode()
+    # xml_body = Et.tostring(into, encoding='utf-8').decode()
     if _xml_pretty:
         xml_body = pretty_parse_xml(xml_body)
     if _output_path is None:
-        print(xml_head)
+        # print(xml_head)
         print(xml_body)
         _output_path = "coverage.xml"
-    xml_content = xml_head + "\n" + xml_body
+    # xml_content = xml_head + "\n" + xml_body
+    xml_content = xml_body
     with open(_output_path, "w+", encoding="utf-8") as f:
         f.write(xml_content)
 
