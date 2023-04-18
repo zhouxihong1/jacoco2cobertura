@@ -1,5 +1,7 @@
 # jacoco2cobertura
 用于将 jacoco xml 转化为 cobertura的python脚本
+A script for converting JaCoCo XML coverage reports into Cobertura XML coverage reports.
+
 
 首先感谢: https://github.com/rix0rrr/cover2cover
 该项目,
