@@ -235,9 +235,10 @@ def jacoco2cobertura(file_name, _source_roots, _output_path=None, _xml_pretty=Fa
 
     into = Et.Element('coverage')
     convert_root(root, into, _source_roots)
-    # xml_head = '<?xml version="1.0" ?>'
+    xml_head = '<?xml version="1.0" ?>'
     # xml_body = Et.tostring(into).decode()
-    xml_body = Et.tostring(into, encoding='utf-8', xml_declaration=True).decode()
+    # xml_body = Et.tostring(into, encoding='utf-8', xml_declaration=True).decode()
+    xml_body = xml_head + "\n" + Et.tostring(into, encoding='utf-8').decode()
     # xml_body = Et.tostring(into, encoding='utf-8').decode()
     if _xml_pretty:
         xml_body = pretty_parse_xml(xml_body)
